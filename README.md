@@ -1,6 +1,6 @@
 # OPAL - OrcaSlicer Pressure Advance Lab
 
-**OPAL** is a dedicated tool for collecting,visualizing, and analyzing **Pressure Advance (PA)** settings for 3D printers. Built to work alongside modern slicers like **OrcaSlicer**, OPAL helps you fine-tune your extrusion consistency by providing a powerful 3D visualization of your PA test results across various speeds and accelerations.
+**OPAL** is a dedicated tool for collecting, visualizing, and analyzing **Pressure Advance (PA)** settings for 3D printers. Built to work alongside modern slicers like **OrcaSlicer**, OPAL helps you fine-tune your extrusion consistency by providing a powerful 3D visualization of your PA test results across various speeds and accelerations.
 
 ![OPAL Data Collection View](screenshots/collection_view.png)
 _(Image: A full view of the OPAL Data Collection Dashboard)_
@@ -97,15 +97,27 @@ _(Image: The 3D plot showing a data surface with a point selected for editing)_
 ### Phase 5: Advanced Analysis (Combining & Smoothing)
 
 1.  Enable multiple datasets (Set 1, Set 2) if you have them.
-2.  Navigate to the **Combined** tab.
-3.  Click **Combine Datasets**.
-4.  **Enable Smoothing**: Toggle "Use Weighted Smoothing".
-5.  **Adjust Lambda**: Use the slider to determine how much smoothing to apply.
-    - _Low Lambda_: Keeps more raw detail (good for spotting specific mechanical issues).
-    - _High Lambda_: Smooths out noise (good for finding the general Best PA value).
+2.  **Toggle Visibility**: Use the checkboxes in the sidebar to show/hide specific surfaces.
 
-![Smoothing Controls](screenshots/combine_smoothing.png)
-_(Image: The Combine/Average settings and slider are located in the top bar of the Visualizer)_
+    ![Multi-Surface View](screenshots/multi_surface_view.png)
+    _(Image: Visualizing two simultaneous datasets)_
+
+3.  **Enable Smoothing**: Toggle "Use Weighted Smoothing" in the toolbar if you want to filter out noise.
+4.  **Adjust Lambda**: Use the slider to determine how much smoothing to apply (prior to combining).
+
+    - _Low Lambda_: Keeps more raw detail.
+    - _High Lambda_: Smooths out noise for a general trend.
+
+    ![Smoothing Controls](screenshots/combine_smoothing.png)
+    _(Image: The Combine/Average settings and slider are located in the top bar of the Visualizer)_
+
+5.  **Combine**: Click **Combine Visible**. OPAL will average the visible surfaces into a new "Combined" dataset (purple).
+
+    ![Combine Confirmation](screenshots/combine_confirm.png)
+    _(Image: Confirmation dialog with warning)_
+
+    ![Combined Result](screenshots/combined_result.png)
+    _(Image: The resulting combined surface shown in purple)_
 
 ### Importing & Pushing Back Data
 
