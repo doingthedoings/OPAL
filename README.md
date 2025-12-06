@@ -38,7 +38,7 @@ Before you print, you need to tell OPAL what you want to test.
 2.  **Configure Printer Settings**:
     - Set your **Nozzle Size** (e.g., 0.4mm).
     - Set your **Filament Flow Ratio** (e.g., 0.98).
-    - _Note: Layer Height is fixed at 0.2mm for standard PA testing._
+    - **Layer Height** and **Line Width** are editable, but **Warning**: You must manually configure these in your slicer's "Process" settings to match. The pattern generator resets them to 0.2mm/0.45mm by default.
 3.  **Define Test Range**:
     - **Acceleration**: Choose a Min and Max (e.g., 500 to 3000 mm/s²) and the number of Steps.
     - **Speed**: Choose a Min and Max (e.g., 40 to 150 mm/s) and the number of Steps.

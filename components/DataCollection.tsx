@@ -566,27 +566,44 @@ export const DataCollection: React.FC<DataCollectionProps> = ({
 
             {/* Column 2: Layer Height & Line Width */}
             <div className="space-y-2">
-              <div className="flex items-center gap-2 bg-zinc-800 p-1.5 rounded border border-zinc-700">
-                <label className="text-[10px] text-zinc-500 w-20 font-medium whitespace-nowrap">
+              <div className="flex items-center gap-2 bg-zinc-900/50 p-1.5 rounded border border-zinc-800 relative group">
+                <label className="text-[10px] text-zinc-500 w-20 font-medium whitespace-nowrap flex items-center gap-1">
                   Layer Height:
+                  <div className="group/tooltip relative">
+                    <svg className="w-3 h-3 text-yellow-600/50 hover:text-yellow-500 cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-2 bg-zinc-900 border border-yellow-900/30 rounded shadow-xl text-[10px] text-zinc-400 leading-tight hidden group-hover/tooltip:block z-[100] pointer-events-none whitespace-normal">
+                      <span className="text-yellow-500 font-bold block mb-1">Warning</span>
+                      These values must be manually configured in your slicer settings before printing. The Orca pattern generator defaults to 0.2mm/0.45mm after each generation, so you must verify this matches every time.
+                    </div>
+                  </div>
                 </label>
-                <input
-                  type="number"
-                  step="0.04"
+                <NumberInput
                   value={config.layerHeight}
-                  readOnly
-                  className="w-full bg-transparent text-xs focus:outline-none text-zinc-500 font-mono cursor-not-allowed"
+                  onChange={(val) => handleConfigChange("layerHeight", val)}
+                  className="flex-1"
+                  step={0.04}
                 />
               </div>
-              <div className="flex items-center gap-2 bg-zinc-800 p-1.5 rounded border border-zinc-700">
-                <label className="text-[10px] text-zinc-500 w-20 font-medium whitespace-nowrap">
+              <div className="flex items-center gap-2 bg-zinc-900/50 p-1.5 rounded border border-zinc-800 relative group">
+                <label className="text-[10px] text-zinc-500 w-20 font-medium whitespace-nowrap flex items-center gap-1">
                   Line Width:
+                  <div className="group/tooltip relative">
+                    <svg className="w-3 h-3 text-yellow-600/50 hover:text-yellow-500 cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-2 bg-zinc-900 border border-yellow-900/30 rounded shadow-xl text-[10px] text-zinc-400 leading-tight hidden group-hover/tooltip:block z-[100] pointer-events-none whitespace-normal">
+                      <span className="text-yellow-500 font-bold block mb-1">Warning</span>
+                      These values must be updated in your slicer settings manually before printing. The pattern generator defaults to 0.2mm/0.45mm every time, so you must verify this for each new batch.
+                    </div>
+                  </div>
                 </label>
-                <input
-                  type="number"
+                <NumberInput
                   value={parseFloat(config.lineWidth.toFixed(4))}
-                  readOnly
-                  className="w-full bg-transparent text-xs focus:outline-none text-zinc-500 font-mono cursor-not-allowed"
+                  onChange={(val) => handleConfigChange("lineWidth", val)}
+                  className="flex-1"
+                  step={0.01}
                 />
               </div>
             </div>
