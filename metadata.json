@@ -1,0 +1,5 @@
+{
+  "name": "OPAL",
+  "description": "A professional 3D visualization tool for printer calibration data (Pressure Advance vs Flow vs Acceleration) with advanced interpolation (PCHIP, RBF).",
+  "requestFramePermissions": []
+}
