@@ -16,6 +16,8 @@ import {
 import { createInterpolator } from './services/interpolation';
 import { generateGrid } from './services/dataUtils';
 
+declare const __APP_VERSION__: string;
+
 const DEFAULT_DATA = [
 	"0.02,1.95,2333", "0.035,5.86,2333", "0.035,1.95,500", "0.035,5.86,500",
 	"0.01,1.95,4167", "0.03,5.86,4167", "0.01,1.95,6000", "0.02,5.86,6000",
@@ -680,7 +682,7 @@ function App() {
               <h1 className="text-sm font-bold text-zinc-100 tracking-tight">OPAL</h1>
               <div className="flex items-center gap-2">
                 <p className="text-[10px] text-zinc-500 uppercase tracking-widest font-medium">Orcaslicer Pressure Advance Lab</p>
-                <span className="text-[9px] text-zinc-600 font-mono border border-zinc-800 px-1 rounded">v1.0.1-rc2</span>
+                <span className="text-[9px] text-zinc-600 font-mono border border-zinc-800 px-1 rounded">v{__APP_VERSION__}</span>
               </div>
             </div>
         </div>

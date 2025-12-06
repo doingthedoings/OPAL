@@ -12,7 +12,7 @@ export const generateSteps = (min: number, max: number, steps: number, precision
 
 export const generateGrid = (config: CollectionState['config']): Record<string, CollectionCell> => {
     const accelValues = generateSteps(config.accelMin, config.accelMax, config.accelSteps, 0);
-    const speedValues = generateSteps(config.speedMin, config.speedMax, config.speedSteps, 2);
+    const speedValues = generateSteps(config.speedMin, config.speedMax, config.speedSteps, 0);
     
     const newGrid: Record<string, CollectionCell> = {};
     

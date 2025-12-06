@@ -1,7 +1,7 @@
 {
   "name": "opal",
   "private": true,
-  "version": "1.0.1-rc2",
+  "version": "1.0.1-rc3",
   "type": "module",
   "main": "electron/main.cjs",
   "author": "OPAL Team",

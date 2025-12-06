@@ -189,7 +189,7 @@ export const DataCollection: React.FC<DataCollectionProps> = ({
     [config.accelMin, config.accelMax, config.accelSteps]
   );
   const speedValues = useMemo(
-    () => generateSteps(config.speedMin, config.speedMax, config.speedSteps, 2),
+    () => generateSteps(config.speedMin, config.speedMax, config.speedSteps, 0),
     [config.speedMin, config.speedMax, config.speedSteps]
   );
 
