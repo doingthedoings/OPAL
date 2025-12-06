@@ -2,15 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1-rc4] - 2025-12-06
+
+### Changed
+
+- **Config**: Allowed manual editing of **Layer Height** and **Line Width** in the Data Collection tab, with a warning that these values must match the slicer process settings.
+
 ## [1.0.1-rc3] - 2025-12-06
 
 ### Fixed
 
 - **Pattern Generation**: Round speed values to integers (0 decimal places) to prevent floating-point errors (e.g., repeating decimals) that caused pattern generation failures.
-
-### Changed
-
-- **Config**: Allowed manual editing of **Layer Height** and **Line Width** in the Data Collection tab, with a warning that these values must match the slicer process settings.
 
 ## [1.0.1-rc2] - 2025-12-06
 
