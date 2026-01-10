@@ -583,7 +583,7 @@ export const DataCollection: React.FC<DataCollectionProps> = ({
                   value={config.layerHeight}
                   onChange={(val) => handleConfigChange("layerHeight", val)}
                   className="flex-1"
-                  step={0.04}
+                  step={0.01}
                 />
               </div>
               <div className="flex items-center gap-2 bg-zinc-900/50 p-1.5 rounded border border-zinc-800 relative group">

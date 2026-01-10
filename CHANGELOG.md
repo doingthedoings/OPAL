@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-01-09
+
+### Changed
+
+- **UI Refinement**: Updated **Layer Height** adjustment steps to **0.01mm** (prev 0.04mm) for finer control.
+
 ## [1.0.1-rc4] - 2025-12-06
 
 ### Changed
